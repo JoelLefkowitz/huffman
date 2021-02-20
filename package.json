@@ -1,0 +1,19 @@
+{
+  "name": "purescript-huffman",
+  "version": "0.1.0",
+  "description": "Huffman coding - Lossless data compression",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "spago test",
+    "build": "spago bundle-app"
+  },
+  "portfolio": {
+    "project_type": "Published on npm",
+    "languages": ["Purescript"],
+    "frameworks": [],
+    "paradigms": [
+      "Functional programming"
+    ],
+    "status": ["In development"]
+  }
+}
