@@ -1,6 +1,6 @@
 # PureScript Huffman
 
-Huffman coding - Lossless data compression
+Huffman coding. Lossless data compression.
 
 ## Status
 

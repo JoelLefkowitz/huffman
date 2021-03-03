@@ -1,7 +1,7 @@
 {
   "name": "purescript-huffman",
   "version": "0.1.0",
-  "description": "Huffman coding - Lossless data compression",
+  "description": "Huffman coding. Lossless data compression.",
   "license": "MIT",
   "author": "Joel Lefkowitz",
   "devDependencies": {
