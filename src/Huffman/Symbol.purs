@@ -2,6 +2,8 @@ module Huffman.Symbol where
 
 import Prelude
 
+import Data.String.CodeUnits (singleton)
+
 newtype Symbol
   = Symbol Char
 
@@ -12,4 +14,4 @@ instance ordSymbol :: Ord Symbol where
   compare (Symbol x) (Symbol y) = compare x y
 
 instance showSymbol :: Show Symbol where
-  show (Symbol x) = "Symbol: " <> show x
+  show (Symbol x) = "Symbol: " <> singleton x

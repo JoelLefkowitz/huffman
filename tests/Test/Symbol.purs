@@ -1,9 +1,14 @@
 module Test.Symbol where
 
 import Prelude
+
 import Effect (Effect)
-import Effect.Class.Console (log)
 import Huffman.Symbol (Symbol(..))
+import Test.Assert (assertEqual)
 
 testSymbol :: Effect Unit
-testSymbol = log "No Symbol tests"
+testSymbol = do
+  assertEqual
+    { actual: show $ Symbol 'a'
+    , expected: "Symbol: a"
+    }
