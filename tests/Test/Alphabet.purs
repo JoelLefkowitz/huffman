@@ -19,5 +19,5 @@ testAlphabet = do
     }
   assertEqual
     { actual: show $ fromString "abc"
-    , expected: "Alphabet: [a, b, c]"
+    , expected: "[a, b, c]"
     }

@@ -1,5 +1,13 @@
 { name = "purescript-huffman"
-, dependencies = [ "console", "effect", "psci-support", "assert", "strings", "ordered-collections" ]
+, dependencies =
+  [ "assert"
+  , "console"
+  , "effect"
+  , "ordered-collections"
+  , "psci-support"
+  , "strings"
+  , "stringutils"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "tests/**/*.purs" ]
 }

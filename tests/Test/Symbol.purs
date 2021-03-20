@@ -10,5 +10,5 @@ testSymbol :: Effect Unit
 testSymbol = do
   assertEqual
     { actual: show $ Symbol 'a'
-    , expected: "Symbol: a"
+    , expected: "a"
     }
