@@ -3,13 +3,9 @@ module Huffman.Weights where
 import Prelude
 import Data.Foldable (sum)
 import Data.Int (toNumber)
-import Data.Map (Map, empty, insert, lookup, values)
-import Data.Maybe (fromMaybe)
-import Data.String.Common (split)
-import Data.String.Pattern (Pattern(..))
-import Data.String.Unsafe (char)
+import Data.Map (Map, values)
 import Huffman.Occurances (Occurances(..))
-import Huffman.Symbol (Symbol(..))
+import Huffman.Symbol (Symbol)
 
 newtype Weights
   = Weights (Map Symbol Number)

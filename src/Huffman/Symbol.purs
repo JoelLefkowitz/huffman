@@ -1,7 +1,6 @@
 module Huffman.Symbol where
 
 import Prelude
-
 import Data.String.CodeUnits (singleton)
 
 newtype Symbol

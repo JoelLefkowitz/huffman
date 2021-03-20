@@ -1,7 +1,6 @@
 module Test.Decode where
 
 import Prelude
-
 import Effect (Effect)
 import Effect.Class.Console (log)
 

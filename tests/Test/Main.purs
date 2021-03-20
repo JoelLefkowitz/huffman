@@ -1,7 +1,6 @@
 module Test.Main where
 
 import Prelude
-
 import Effect (Effect)
 import Test.Alphabet (testAlphabet)
 import Test.Codewords (testCodewords)
@@ -9,6 +8,7 @@ import Test.Decode (testDecode)
 import Test.Encode (testEncode)
 import Test.Occurances (testOccurances)
 import Test.Symbol (testSymbol)
+import Test.Tree (testTree)
 import Test.Utilities (testUtilities)
 import Test.Weights (testWeights)
 
@@ -19,6 +19,7 @@ main = do
   testAlphabet
   testOccurances
   testWeights
+  testTree
   testCodewords
   testEncode
   testDecode

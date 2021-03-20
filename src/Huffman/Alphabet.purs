@@ -1,7 +1,6 @@
 module Huffman.Alphabet where
 
 import Prelude
-
 import Data.Set (Set, fromFoldable)
 import Data.String (Pattern(..), split)
 import Data.String.Unsafe (char)
@@ -20,6 +19,4 @@ instance showAlphabet :: Show Alphabet where
 fromString :: String -> Alphabet
 fromString str = Alphabet (fromFoldable symbols)
   where
-    symbols = Symbol <<< char <$> split (Pattern "") str
-
-
+  symbols = Symbol <<< char <$> split (Pattern "") str

@@ -1,7 +1,6 @@
 module Test.Weights where
 
 import Prelude
-
 import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
@@ -14,8 +13,10 @@ testWeights :: Effect Unit
 testWeights = do
   assertEqual
     { actual: fromOccurances <<< countOccurances $ "ab"
-    , expected: Weights $ fromFoldable [
-        Tuple (Symbol 'a') 0.5,
-        Tuple (Symbol 'b') 0.5
-      ]
+    , expected:
+        Weights
+          $ fromFoldable
+              [ Tuple (Symbol 'a') 0.5
+              , Tuple (Symbol 'b') 0.5
+              ]
     }

@@ -1,7 +1,6 @@
 module Test.Symbol where
 
 import Prelude
-
 import Effect (Effect)
 import Huffman.Symbol (Symbol(..))
 import Test.Assert (assertEqual)

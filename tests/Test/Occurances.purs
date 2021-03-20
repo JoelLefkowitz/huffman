@@ -1,7 +1,6 @@
 module Test.Occurances where
 
 import Prelude
-
 import Data.Map (empty, singleton, fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
@@ -21,15 +20,19 @@ testOccurances = do
     }
   assertEqual
     { actual: countOccurances "ab"
-    , expected: Occurances $ fromFoldable [
-        Tuple (Symbol 'a') 1,
-        Tuple (Symbol 'b') 1
-      ]
+    , expected:
+        Occurances
+          $ fromFoldable
+              [ Tuple (Symbol 'a') 1
+              , Tuple (Symbol 'b') 1
+              ]
     }
   assertEqual
     { actual: countOccurances "abb"
-    , expected: Occurances $ fromFoldable [
-        Tuple (Symbol 'a') 1,
-        Tuple (Symbol 'b') 2
-      ]
+    , expected:
+        Occurances
+          $ fromFoldable
+              [ Tuple (Symbol 'a') 1
+              , Tuple (Symbol 'b') 2
+              ]
     }
