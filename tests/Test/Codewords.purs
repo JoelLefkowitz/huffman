@@ -1,7 +1,6 @@
 module Test.Codewords where
 
 import Prelude
-
 import Data.Map (empty, fromFoldable, singleton)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
@@ -13,10 +12,10 @@ import Huffman.Weights (fromOccurances)
 import Test.Assert (assertEqual)
 
 codewords :: String -> Codewords
-codewords = 
-    fromHuffmanTree
+codewords =
+  fromHuffmanTree
     <<< fromWeights
-    <<< fromOccurances 
+    <<< fromOccurances
     <<< countOccurances
 
 testCodewords :: Effect Unit
@@ -27,30 +26,32 @@ testCodewords = do
     }
   assertEqual
     { actual: codewords "a"
-    , expected: Codewords $ singleton (Symbol 'a') "0" 
+    , expected: Codewords $ singleton (Symbol 'a') "0"
     }
   assertEqual
     { actual: codewords "ab"
-    , expected: Codewords <<< fromFoldable $ [
-       Tuple (Symbol 'a') "0",
-       Tuple (Symbol 'b') "1"
-      ]
+    , expected:
+        Codewords <<< fromFoldable
+          $ [ Tuple (Symbol 'a') "0"
+            , Tuple (Symbol 'b') "1"
+            ]
     }
   assertEqual
     { actual: codewords "abcd"
-      , expected: Codewords <<< fromFoldable $ [
-       Tuple (Symbol 'a') "00",
-       Tuple (Symbol 'b') "01",
-       Tuple (Symbol 'c') "10",
-       Tuple (Symbol 'd') "11"
-      ]
+    , expected:
+        Codewords <<< fromFoldable
+          $ [ Tuple (Symbol 'a') "10"
+            , Tuple (Symbol 'b') "11"
+            , Tuple (Symbol 'c') "00"
+            , Tuple (Symbol 'd') "01"
+            ]
     }
   assertEqual
     { actual: codewords "abcc"
-      , expected: Codewords <<< fromFoldable $ [
-       Tuple (Symbol 'a') "10",
-       Tuple (Symbol 'b') "11",
-       Tuple (Symbol 'c') "0"
-      ]
+    , expected:
+        Codewords <<< fromFoldable
+          $ [ Tuple (Symbol 'a') "00"
+            , Tuple (Symbol 'b') "01"
+            , Tuple (Symbol 'c') "1"
+            ]
     }
-  

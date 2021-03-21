@@ -1,7 +1,6 @@
 module Test.Weights where
 
 import Prelude
-
 import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)

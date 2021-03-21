@@ -1,7 +1,6 @@
 module Huffman.Tree where
 
 import Prelude
-
 import Data.Array (foldl, insert, length, slice, sort)
 import Data.Map.Internal (toUnfoldable)
 import Data.Tuple (Tuple(..))
@@ -19,14 +18,15 @@ instance eqHuffmanTree :: Eq HuffmanTree where
   eq _ _ = false
 
 instance ordHuffmanTree :: Ord HuffmanTree where
-  compare x y = compare (weight x) (weight y)  
-  
+  compare x y = compare (weight x) (weight y)
+
 instance showHuffmanTree :: Show HuffmanTree where
   show (Node arr w) = "[" <> (joinWith ", " arr) <> "]: " <> show w
   show (Leaf s w) = show s <> ": " <> show w
 
 weight :: HuffmanTree -> Number
 weight (Node arr w) = w
+
 weight (Leaf s w) = w
 
 sum :: Array HuffmanTree -> Number
@@ -35,15 +35,17 @@ sum arr = foldl (\acc x -> acc + weight x) 0.0 arr
 fromWeights :: Weights -> HuffmanTree
 fromWeights (Weights weights) = joinTree $ Node leaves 1.0
   where
-    leaves = (\(Tuple k v) -> Leaf k v) <$> toUnfoldable weights
+  leaves = (\(Tuple k v) -> Leaf k v) <$> toUnfoldable weights
 
 joinTree :: HuffmanTree -> HuffmanTree
 joinTree (Leaf s w) = (Leaf s w)
+
 joinTree (Node arr w)
   | length arr <= 2 = (Node arr w)
-  | otherwise       = joinTree (Node (insert (joinTree newNode) untouched) w)
-
-  where
+  | otherwise = joinTree (Node (insert (joinTree newNode) untouched) w)
+    where
     pair = slice 0 2 (sort arr)
+
     untouched = slice 2 (length arr) (sort arr)
+
     newNode = Node pair (sum pair)
