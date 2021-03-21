@@ -23,4 +23,6 @@ countOccurances str = Occurances $ foldl increment empty symbols
   where
   symbols = Symbol <<< char <$> split (Pattern "") str
 
-  increment acc x = insert x ((fromMaybe 0 $ lookup x acc) + 1) acc
+  increment acc x = insert x (lookupInt x acc + 1) acc
+
+  lookupInt x acc = fromMaybe 0 $ lookup x acc

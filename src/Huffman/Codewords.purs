@@ -1,8 +1,10 @@
 module Huffman.Codewords where
 
 import Prelude
-import Data.Map (Map, empty)
-import Huffman.Symbol (Symbol(..))
+
+import Data.Map (Map, fromFoldable, singleton)
+import Data.Tuple (Tuple(..))
+import Huffman.Symbol (Symbol)
 import Huffman.Tree (HuffmanTree(..))
 
 newtype Codewords
@@ -15,6 +17,11 @@ instance showCodewords :: Show Codewords where
   show (Codewords x) = show x
 
 fromHuffmanTree :: HuffmanTree -> Codewords
-fromHuffmanTree (Node _ _) = Codewords empty
+fromHuffmanTree (Leaf s w) = Codewords $ singleton s "0"
+fromHuffmanTree (Node arr w) = Codewords <<< fromFoldable $ codewords
+  where 
+    codewords = collapseTree (Node arr w) ""
 
-fromHuffmanTree (Leaf (Symbol _) _) = Codewords empty
+collapseTree :: HuffmanTree -> String -> Array (Tuple Symbol String)
+collapseTree (Leaf s w) code = [Tuple s code]
+collapseTree (Node arr w) code = []

@@ -1,6 +1,7 @@
 module Test.Weights where
 
 import Prelude
+
 import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
@@ -9,10 +10,13 @@ import Huffman.Symbol (Symbol(..))
 import Huffman.Weights (Weights(..), fromOccurances)
 import Test.Assert (assertEqual)
 
+weights :: String -> Weights
+weights = fromOccurances <<< countOccurances
+
 testWeights :: Effect Unit
 testWeights = do
   assertEqual
-    { actual: fromOccurances <<< countOccurances $ "ab"
+    { actual: weights $ "ab"
     , expected:
         Weights
           $ fromFoldable
