@@ -14,3 +14,6 @@ instance ordSymbol :: Ord Symbol where
 
 instance showSymbol :: Show Symbol where
   show (Symbol x) = singleton x
+
+toString :: Symbol -> String
+toString (Symbol s) = singleton s

@@ -1,11 +1,13 @@
 module Huffman.Codewords where
 
 import Prelude
-import Data.Array (concat, concatMap)
+import Data.Array (concat)
 import Data.Map (Map, fromFoldable, singleton)
 import Data.Tuple (Tuple(..))
+import Huffman.Occurances (countOccurances)
 import Huffman.Symbol (Symbol)
-import Huffman.Tree (HuffmanTree(..))
+import Huffman.Tree (HuffmanTree(..), fromWeights)
+import Huffman.Weights (fromOccurances)
 
 newtype Codewords
   = Codewords (Map Symbol String)
@@ -15,6 +17,13 @@ instance eqCodewords :: Eq Codewords where
 
 instance showCodewords :: Show Codewords where
   show (Codewords x) = show x
+
+composeCodewords :: String -> Codewords
+composeCodewords =
+  fromHuffmanTree
+    <<< fromWeights
+    <<< fromOccurances
+    <<< countOccurances
 
 fromHuffmanTree :: HuffmanTree -> Codewords
 fromHuffmanTree (Leaf s _) = Codewords $ singleton s "0"

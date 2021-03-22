@@ -2,6 +2,7 @@
 , dependencies =
   [ "assert"
   , "console"
+  , "debug"
   , "effect"
   , "ordered-collections"
   , "psci-support"
