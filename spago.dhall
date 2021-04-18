@@ -10,5 +10,5 @@
   , "stringutils"
   ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs", "tests/**/*.purs" ]
+, sources = [ "src/**/*.purs" ]
 }
