@@ -1,7 +1,7 @@
-Purescript Huffman
+PureScript Huffman
 ============
 
-Welcome to Purescript Huffman's documentation!
+Welcome to PureScript Huffman's documentation!
 
 .. raw:: html
    :file: README.html

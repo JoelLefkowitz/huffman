@@ -1,6 +1,6 @@
 ## Usage
 
-```purscript
+```purescript
 import Huffman (composeCodewords, encodeWith, decodeWith)
 
 str = "A strongly-typed functional programming language that compiles to JavaScript"
