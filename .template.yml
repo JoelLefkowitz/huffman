@@ -1,0 +1,47 @@
+output_dir: .
+
+clear_top_level: true
+logical_grouping: true
+
+collections:
+    - common
+    - purescript
+
+loader_paths:
+    - docs
+
+protected:
+    - spago.dhall
+
+render_context:
+    project:
+        project_name: purescript-huffman
+        version: 0.1.0
+
+        verbose_name: PureScript Huffman
+        description: Huffman coding. Lossless data compression.
+
+        repository: https://github.com/JoelLefkowitz/purescript-huffman
+        codacy_id: 4934e15d76c04969af83eddea6ce5461
+
+        inserts:
+            - usage.md
+
+    author:
+        author: Joel Lefkowitz
+        author_email: joellefkowitz@hotmail.com
+        author_github_handle: joellefkowitz
+
+    package:
+        is_pursuit_package: true
+        package_name: huffman
+
+    portfolio:
+        is_portfolio: true
+        status_level: 3
+
+        languages:
+            - PureScript
+
+        paradigms:
+            - Functional programming
