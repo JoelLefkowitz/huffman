@@ -1,12 +1,12 @@
-module Huffman.Tree where
+module Data.Huffman.Tree where
 
 import Prelude
 import Data.Array (foldl, insert, length, slice, sort)
 import Data.Map.Internal (toUnfoldable)
 import Data.Tuple (Tuple(..))
-import Huffman.Symbol (Symbol)
-import Huffman.Weights (Weights(..))
-import Utilities.Strings (joinWith)
+import Data.Huffman.Symbol (Symbol)
+import Data.Huffman.Weights (Weights(..))
+import Data.String.Repr (joinWith)
 
 data HuffmanTree
   = Node (Array (HuffmanTree)) Number

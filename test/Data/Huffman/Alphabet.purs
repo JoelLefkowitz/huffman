@@ -1,10 +1,10 @@
-module Test.Huffman.Alphabet where
+module Test.Data.Huffman.Alphabet where
 
 import Prelude
 import Data.Set (fromFoldable)
 import Effect (Effect)
-import Huffman.Alphabet (Alphabet(..), fromString)
-import Huffman.Symbol (Symbol(..))
+import Data.Huffman.Alphabet (Alphabet(..), fromString)
+import Data.Huffman.Symbol (Symbol(..))
 import Test.Assert (assertEqual)
 
 testAlphabet :: Effect Unit

@@ -1,11 +1,11 @@
-module Huffman.Alphabet where
+module Data.Huffman.Alphabet where
 
 import Prelude
 import Data.Set (Set, fromFoldable)
 import Data.String (Pattern(..), split)
 import Data.String.Unsafe (char)
-import Huffman.Symbol (Symbol(..))
-import Utilities.Strings (joinWith)
+import Data.Huffman.Symbol (Symbol(..))
+import Data.String.Repr (joinWith)
 
 newtype Alphabet
   = Alphabet (Set Symbol)

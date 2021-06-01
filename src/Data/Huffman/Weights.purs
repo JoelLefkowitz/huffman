@@ -1,11 +1,11 @@
-module Huffman.Weights where
+module Data.Huffman.Weights where
 
 import Prelude
 import Data.Foldable (sum)
 import Data.Int (toNumber)
 import Data.Map (Map, values)
-import Huffman.Occurances (Occurances(..))
-import Huffman.Symbol (Symbol)
+import Data.Huffman.Occurances (Occurances(..))
+import Data.Huffman.Symbol (Symbol)
 
 newtype Weights
   = Weights (Map Symbol Number)

@@ -1,11 +1,11 @@
-module Test.Huffman.Occurances where
+module Test.Data.Huffman.Occurances where
 
 import Prelude
 import Data.Map (empty, singleton, fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Huffman.Occurances (Occurances(..), countOccurances)
-import Huffman.Symbol (Symbol(..))
+import Data.Huffman.Occurances (Occurances(..), countOccurances)
+import Data.Huffman.Symbol (Symbol(..))
 import Test.Assert (assertEqual)
 
 testOccurances :: Effect Unit

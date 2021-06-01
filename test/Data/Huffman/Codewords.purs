@@ -1,11 +1,11 @@
-module Test.Huffman.Codewords where
+module Test.Data.Huffman.Codewords where
 
 import Prelude
 import Data.Map (empty, fromFoldable, singleton)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Huffman.Codewords (Codewords(..), composeCodewords)
-import Huffman.Symbol (Symbol(..))
+import Data.Huffman.Codewords (Codewords(..), composeCodewords)
+import Data.Huffman.Symbol (Symbol(..))
 import Test.Assert (assertEqual)
 
 testCodewords :: Effect Unit

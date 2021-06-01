@@ -2,18 +2,16 @@ module Test.Main where
 
 import Prelude
 import Effect (Effect)
-import Test.Huffman.Alphabet (testAlphabet)
-import Test.Huffman.Codewords (testCodewords)
-import Test.Huffman.Encode (testEncode)
-import Test.Huffman.Occurances (testOccurances)
-import Test.Huffman.Symbol (testSymbol)
-import Test.Huffman.Tree (testTree)
-import Test.Utilities.Strings (testStrings)
-import Test.Huffman.Weights (testWeights)
+import Test.Data.Huffman.Alphabet (testAlphabet)
+import Test.Data.Huffman.Codewords (testCodewords)
+import Test.Data.Huffman.Encode (testEncode)
+import Test.Data.Huffman.Occurances (testOccurances)
+import Test.Data.Huffman.Symbol (testSymbol)
+import Test.Data.Huffman.Tree (testTree)
+import Test.Data.Huffman.Weights (testWeights)
 
 main :: Effect Unit
 main = do
-  testStrings
   testSymbol
   testAlphabet
   testOccurances

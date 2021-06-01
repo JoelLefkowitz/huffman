@@ -6,6 +6,7 @@
   , "effect"
   , "ordered-collections"
   , "psci-support"
+  , "repr"
   , "strings"
   , "stringutils"
   ]

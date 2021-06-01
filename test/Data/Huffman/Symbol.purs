@@ -1,8 +1,8 @@
-module Test.Huffman.Symbol where
+module Test.Data.Huffman.Symbol where
 
 import Prelude
 import Effect (Effect)
-import Huffman.Symbol (Symbol(..))
+import Data.Huffman.Symbol (Symbol(..))
 import Test.Assert (assertEqual)
 
 testSymbol :: Effect Unit

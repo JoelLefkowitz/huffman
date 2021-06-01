@@ -1,4 +1,4 @@
-module Huffman.Occurances where
+module Data.Huffman.Occurances where
 
 import Prelude
 import Data.Foldable (foldl)
@@ -7,7 +7,7 @@ import Data.Maybe (fromMaybe)
 import Data.String.Common (split)
 import Data.String.Pattern (Pattern(..))
 import Data.String.Unsafe (char)
-import Huffman.Symbol (Symbol(..))
+import Data.Huffman.Symbol (Symbol(..))
 
 newtype Occurances
   = Occurances (Map Symbol Int)

@@ -1,9 +1,9 @@
-module Test.Huffman.Encode where
+module Test.Data.Huffman.Encode where
 
 import Prelude
 import Effect (Effect)
-import Huffman.Codewords (composeCodewords)
-import Huffman.Encode (decodeWith, encodeWith)
+import Data.Huffman.Codewords (composeCodewords)
+import Data.Huffman.Encode (decodeWith, encodeWith)
 import Test.Assert (assertEqual)
 
 testEncode :: Effect Unit

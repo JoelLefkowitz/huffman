@@ -1,13 +1,13 @@
-module Huffman.Codewords where
+module Data.Huffman.Codewords where
 
 import Prelude
 import Data.Array (concat)
 import Data.Map (Map, fromFoldable, singleton)
 import Data.Tuple (Tuple(..))
-import Huffman.Occurances (countOccurances)
-import Huffman.Symbol (Symbol)
-import Huffman.Tree (HuffmanTree(..), fromWeights)
-import Huffman.Weights (fromOccurances)
+import Data.Huffman.Occurances (countOccurances)
+import Data.Huffman.Symbol (Symbol)
+import Data.Huffman.Tree (HuffmanTree(..), fromWeights)
+import Data.Huffman.Weights (fromOccurances)
 
 newtype Codewords
   = Codewords (Map Symbol String)

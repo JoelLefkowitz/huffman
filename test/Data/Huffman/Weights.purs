@@ -1,12 +1,12 @@
-module Test.Huffman.Weights where
+module Test.Data.Huffman.Weights where
 
 import Prelude
 import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Huffman.Occurances (countOccurances)
-import Huffman.Symbol (Symbol(..))
-import Huffman.Weights (Weights(..), fromOccurances)
+import Data.Huffman.Occurances (countOccurances)
+import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Weights (Weights(..), fromOccurances)
 import Test.Assert (assertEqual)
 
 weights :: String -> Weights

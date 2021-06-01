@@ -1,4 +1,4 @@
-module Huffman.Encode where
+module Data.Huffman.Encode where
 
 import Prelude
 import Data.Array (head)
@@ -11,9 +11,9 @@ import Data.String.CodeUnits (length)
 import Data.String.Pattern (Pattern(..))
 import Data.String.Unsafe (char)
 import Data.String.Utils (startsWith)
-import Huffman.Codewords (Codewords(..))
-import Huffman.Symbol (Symbol(..), toString)
-import Utilities.Strings (trimStart)
+import Data.Huffman.Codewords (Codewords(..))
+import Data.Huffman.Symbol (Symbol(..), toString)
+import Data.String.Repr (trimStart)
 
 encodeWith :: String -> Codewords -> String
 encodeWith str (Codewords codewords) = foldl replace "" symbols

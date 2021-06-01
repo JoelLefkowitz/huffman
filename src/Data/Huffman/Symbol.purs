@@ -1,4 +1,4 @@
-module Huffman.Symbol where
+module Data.Huffman.Symbol where
 
 import Prelude
 import Data.String.CodeUnits (singleton)

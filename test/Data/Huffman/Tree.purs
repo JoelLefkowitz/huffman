@@ -1,11 +1,11 @@
-module Test.Huffman.Tree where
+module Test.Data.Huffman.Tree where
 
 import Prelude
 import Effect (Effect)
-import Huffman.Occurances (countOccurances)
-import Huffman.Symbol (Symbol(..))
-import Huffman.Tree (HuffmanTree(..), fromWeights)
-import Huffman.Weights (fromOccurances)
+import Data.Huffman.Occurances (countOccurances)
+import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Tree (HuffmanTree(..), fromWeights)
+import Data.Huffman.Weights (fromOccurances)
 import Test.Assert (assertEqual)
 
 tree :: String -> HuffmanTree
