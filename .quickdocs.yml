@@ -1,0 +1,7 @@
+project: purescript-huffman
+version: 0.2.0
+author: Joel Lefkowitz
+verbose_name: PureScript Huffman
+html_title: PureScript Huffman
+github_url: https://github.com/JoelLefkowitz/purescript-huffman
+apidoc_module_dir: src
