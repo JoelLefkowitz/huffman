@@ -3,13 +3,13 @@
 , repository = "https://github.com/JoelLefkowitz/purescript-huffman"
 , license = "MIT"
 , dependencies = 
-    [ "prelude"
-    , "repr"
-    , "foldable-traversable"
-    , "strings"
+    [ "foldable-traversable"
     , "ordered-collections"
-    , "stringutils"
+    , "prelude"
     , "random"
+    , "repr"
+    , "strings"
+    , "stringutils"
     ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs" ]
