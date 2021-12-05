@@ -13,7 +13,7 @@ render_context:
   project:
     name: purescript-huffman
     description: Huffman coding. Lossless data compression.
-    version: 0.2.0
+    version: 0.2.1
     verbose_name: PureScript Huffman
     repository: https://github.com/JoelLefkowitz/purescript-huffman
     codacy_id: 4934e15d76c04969af83eddea6ce5461

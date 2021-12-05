@@ -9,7 +9,7 @@ sys.path.append("..")
     Sphinx core settings
 """
 project = "purescript-huffman"
-version = "0.2.0"
+version = "0.2.1"
 author = "Joel Lefkowitz"
 master_doc = "index"
 

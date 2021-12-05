@@ -1,5 +1,5 @@
 { name = "purescript-huffman"
-, version = "0.2.0"
+, version = "0.2.1"
 , repository = "https://github.com/JoelLefkowitz/purescript-huffman"
 , license = "MIT"
 , dependencies = 

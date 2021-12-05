@@ -1,6 +1,6 @@
 {
   "name": "purescript-huffman",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Huffman coding. Lossless data compression.",
   "homepage": "https://github.com/JoelLefkowitz/purescript-huffman",
   "license": "MIT",
