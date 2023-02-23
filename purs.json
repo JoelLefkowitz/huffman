@@ -1,0 +1,19 @@
+{
+  "name": "huffman",
+  "description": "Huffman coding. Lossless data compression.",
+  "version": "0.2.1",
+  "license": "MIT",
+  "location": {
+    "githubOwner": "joellefkowitz",
+    "githubRepo": "huffman"
+  },
+  "dependencies": {
+    "foldable-traversable": "^5.0.1",
+    "ordered-collections": "^2.0.2",
+    "prelude": "^5.0.1",
+    "random": "^5.0.0",
+    "repr": "joellefkowitz/repr#0.3.1",
+    "strings": "^5.0.0",
+    "stringutils": "^0.0.11"
+  }
+}
