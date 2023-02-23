@@ -41,6 +41,7 @@ testTree = do
           1.0
     }
   assertEqual
+    -- cspell:disable-next-line
     { actual: tree "abcc"
     , expected:
         Node

@@ -37,6 +37,7 @@ testCodewords = do
             ]
     }
   assertEqual
+    -- cspell:disable-next-line
     { actual: composeCodewords "abcc"
     , expected:
         Codewords <<< fromFoldable

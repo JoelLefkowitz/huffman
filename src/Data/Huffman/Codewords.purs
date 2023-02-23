@@ -1,7 +1,6 @@
 module Data.Huffman.Codewords where
 
 import Prelude
-
 import Data.Array (concat)
 import Data.Foldable (foldl)
 import Data.Huffman.Occurances (countOccurances)
