@@ -23,7 +23,7 @@ bower install purescript-huffman
 
 ## Usage
 
-```purescript
+```purs
 import Huffman (composeCodewords, encodeWith, decodeWith)
 
 str = "A strongly-typed functional programming language that compiles to JavaScript"
