@@ -3,6 +3,11 @@ exclude:
   - message: Codacy project public id
     pattern: 4934e15d76c04969af83eddea6ce5461
 
+  - message: Package owner public ssh key
+    pattern: public
+    paths:
+      - purs.json
+
   - message: Giphy links
     pattern: https://media.giphy.com/media/
 
