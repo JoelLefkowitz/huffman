@@ -2,10 +2,6 @@
 
 Huffman coding. Lossless data compression.
 
-# Env names
-
-Resolve short environment aliases.
-
 ## Status
 
 | Source     | Shields                                                       |
