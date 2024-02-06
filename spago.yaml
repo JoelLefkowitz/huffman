@@ -2,7 +2,7 @@ package:
   name: huffman
   description: Huffman coding. Lossless data compression.
   publish:
-    version: 0.3.3
+    version: 0.3.4
     license: MIT
     location:
       githubOwner: joellefkowitz
