@@ -4,13 +4,13 @@ import Prelude
 import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Data.Huffman.Occurances (countOccurances)
+import Data.Huffman.Occurrences (countOccurrences)
 import Data.Huffman.Symbol (Symbol(..))
-import Data.Huffman.Weights (Weights(..), fromOccurances)
+import Data.Huffman.Weights (Weights(..), fromOccurrences)
 import Test.Assert (assertEqual)
 
 weights :: String -> Weights
-weights = fromOccurances <<< countOccurances
+weights = fromOccurrences <<< countOccurrences
 
 testWeights :: Effect Unit
 testWeights = do

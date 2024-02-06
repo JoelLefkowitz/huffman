@@ -1,21 +1,20 @@
-# PureScript Huffman
+# Huffman
 
 Huffman coding. Lossless data compression.
 
-## Status
-
-| Source     | Shields                                                       |
-| ---------- | ------------------------------------------------------------- |
-| Project    | ![latest_release] ![license] ![line_count] ![language_count]  |
-| Health     | ![documentation] ![review_action] ![codacy_quality]           |
-| Repository | ![open_issues] ![closed_issues] ![open_pulls] ![closed_pulls] |
-| Activity   | ![contributors] ![monthly_commits] ![last_commit]             |
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/huffman/review.yml)
+![Version](https://pursuit.purescript.org/packages/purescript-huffman/badge)
+![Quality](https://img.shields.io/codacy/grade/4934e15d76c04969af83eddea6ce5461)
 
 ## Installation
 
 ```bash
-bower install purescript-huffman
+spago install huffman
 ```
+
+## Documentation
+
+Documentation and more detailed examples are hosted on [Github Pages](https://joellefkowitz.github.io/huffman).
 
 ## Usage
 
@@ -71,47 +70,45 @@ show decoded
 >>> "A strongly-typed functional programming language that compiles to JavaScript"
 ```
 
-## Tests
+## Tooling
+
+### Tests
 
 To run tests:
 
 ```bash
-pulp test
+spago test
 ```
 
-## Documentation
-
-This repository's documentation is hosted on [Pursuit](https://pursuit.purescript.org/packages/purescript-huffman).
+### Documentation
 
 To generate the documentation locally:
 
 ```bash
-pulp docs
+spago docs
 ```
 
-## Linters
+### Linters
 
 To run linters:
 
 ```bash
-nps lint
+npm run lint
 ```
 
-## Formatters
+### Formatters
 
 To run formatters:
 
 ```bash
-nps format
+npm run format
 ```
 
-## Continuous integration
+## Contributing
 
-This repository uses GitHub Actions to lint and test each commit. Each commit should be formatted and its corresponding documentation should be updated.
+Please read this repository's [Code of Conduct](CODE_OF_CONDUCT.md) which outlines our collaboration standards and the [Changelog](CHANGELOG.md) for details on breaking changes that have been made.
 
-## Versioning
-
-This repository adheres to semantic versioning standards. For more information on semantic versioning visit [semver](https://semver.org).
+This repository adheres to semantic versioning standards. For more information on semantic versioning visit [SemVer](https://semver.org).
 
 Bump2version is used to version and tag changes. For example:
 
@@ -119,15 +116,7 @@ Bump2version is used to version and tag changes. For example:
 bump2version patch
 ```
 
-## Changelog
-
-Please read this repository's [changelog](CHANGELOG.md) for details on changes that have been made.
-
-## Contributing
-
-Please read this repository's guidelines on [contributing](CONTRIBUTING.md) for details on the process for submitting pull requests. Moreover, our [code of conduct](CODE_OF_CONDUCT.md) declares our collaboration standards.
-
-## Contributors
+### Contributors
 
 - [Joel Lefkowitz](https://github.com/joellefkowitz) - Initial work
 
@@ -140,18 +129,3 @@ Lots of love to the open source community!
     <img width=200 height=200 src='https://media.giphy.com/media/KEAAbQ5clGWJwuJuZB/giphy.gif' alt='Love each other' />
     <img width=200 height=200 src='https://media.giphy.com/media/WRWykrFkxJA6JJuTvc/giphy.gif' alt="It's ok to have a bad day" />
 </p>
-
-[latest_release]: https://img.shields.io/github/v/tag/joellefkowitz/purescript-huffman "Latest release"
-[license]: https://img.shields.io/github/license/joellefkowitz/purescript-huffman "License"
-[line_count]: https://img.shields.io/tokei/lines/github/joellefkowitz/purescript-huffman "Line count"
-[language_count]: https://img.shields.io/github/languages/count/joellefkowitz/purescript-huffman "Language count"
-[documentation]: https://pursuit.purescript.org/packages/purescript-huffman/badge "Documentation"
-[review_action]: https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/purescript-huffman/review.yml "Review action"
-[codacy_quality]: https://img.shields.io/codacy/grade/4934e15d76c04969af83eddea6ce5461 "Codacy quality"
-[open_issues]: https://img.shields.io/github/issues/joellefkowitz/purescript-huffman "Open issues"
-[closed_issues]: https://img.shields.io/github/issues-closed/joellefkowitz/purescript-huffman "Closed issues"
-[open_pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/purescript-huffman "Open pull requests"
-[closed_pulls]: https://img.shields.io/github/issues-pr-closed/joellefkowitz/purescript-huffman "Closed pull requests"
-[contributors]: https://img.shields.io/github/contributors/joellefkowitz/purescript-huffman "Contributors"
-[monthly_commits]: https://img.shields.io/github/commit-activity/m/joellefkowitz/purescript-huffman "Monthly commits"
-[last_commit]: https://img.shields.io/github/last-commit/joellefkowitz/purescript-huffman "Last commit"

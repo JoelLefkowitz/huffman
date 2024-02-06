@@ -1,4 +1,4 @@
-module Data.Huffman.Occurances where
+module Data.Huffman.Occurrences where
 
 import Prelude
 import Data.Foldable (foldl)
@@ -9,17 +9,17 @@ import Data.String.Pattern (Pattern(..))
 import Data.String.Unsafe (char)
 import Data.Huffman.Symbol (Symbol(..))
 
-newtype Occurances
-  = Occurances (Map Symbol Int)
+newtype Occurrences
+  = Occurrences (Map Symbol Int)
 
-instance eqOccurances :: Eq Occurances where
-  eq (Occurances x) (Occurances y) = eq x y
+instance eqOccurrences :: Eq Occurrences where
+  eq (Occurrences x) (Occurrences y) = eq x y
 
-instance showOccurances :: Show Occurances where
-  show (Occurances x) = show x
+instance showOccurrences :: Show Occurrences where
+  show (Occurrences x) = show x
 
-countOccurances :: String -> Occurances
-countOccurances str = Occurances $ foldl increment empty symbols
+countOccurrences :: String -> Occurrences
+countOccurrences str = Occurrences $ foldl increment empty symbols
   where
   symbols = Symbol <<< char <$> split (Pattern "") str
 

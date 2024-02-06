@@ -4,7 +4,7 @@ import Prelude
 import Data.Foldable (sum)
 import Data.Int (toNumber)
 import Data.Map (Map, values)
-import Data.Huffman.Occurances (Occurances(..))
+import Data.Huffman.Occurrences (Occurrences(..))
 import Data.Huffman.Symbol (Symbol)
 
 newtype Weights
@@ -16,9 +16,9 @@ instance eqWeights :: Eq Weights where
 instance showWeights :: Show Weights where
   show (Weights x) = show x
 
-fromOccurances :: Occurances -> Weights
-fromOccurances (Occurances occ) = Weights $ normalize totalOccurances <$> toNumber <$> occ
+fromOccurrences :: Occurrences -> Weights
+fromOccurrences (Occurrences occ) = Weights $ normalize totalOccurrences <$> toNumber <$> occ
   where
-  totalOccurances = sum $ values occ
+  totalOccurrences = sum $ values occ
 
   normalize total x = (1.0 / toNumber total) * x

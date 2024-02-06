@@ -3,16 +3,14 @@ module Data.Huffman.Codewords where
 import Prelude
 import Data.Array (concat)
 import Data.Foldable (foldl)
-import Data.Huffman.Occurances (countOccurances)
+import Data.Huffman.Occurrences (countOccurrences)
 import Data.Huffman.Symbol (toString)
 import Data.Huffman.Symbol as Symbol
 import Data.Huffman.Tree (HuffmanTree(..), fromWeights)
-import Data.Huffman.Weights (fromOccurances)
+import Data.Huffman.Weights (fromOccurrences)
 import Data.List (zip)
 import Data.Map (Map, fromFoldable, singleton, values)
 import Data.Map.Internal (keys)
-import Data.Semigroup.Generic (genericAppend)
-import Data.String.Utils (startsWith)
 import Data.Tuple (Tuple(..))
 
 foreign import utf16ToBinary :: String -> String
@@ -41,8 +39,8 @@ composeCodewords :: String -> Codewords
 composeCodewords =
   fromHuffmanTree
     <<< fromWeights
-    <<< fromOccurances
-    <<< countOccurances
+    <<< fromOccurrences
+    <<< countOccurrences
 
 fromHuffmanTree :: HuffmanTree -> Codewords
 fromHuffmanTree (Leaf s _) = Codewords $ singleton s "0"
@@ -54,9 +52,9 @@ fromHuffmanTree (Node arr w) = Codewords <<< fromFoldable $ codewords
   codewords = collapseTree (Node arr w) ""
 
 collapseTree :: HuffmanTree -> String -> Array (Tuple Symbol.Symbol String)
-collapseTree (Leaf s w) code = [ Tuple s code ]
+collapseTree (Leaf s _) code = [ Tuple s code ]
 
-collapseTree (Node [ x, y ] w) code = concat [ xx, yy ]
+collapseTree (Node [ x, y ] _) code = concat [ xx, yy ]
   where
   xx = collapseTree x (code <> "0")
 
