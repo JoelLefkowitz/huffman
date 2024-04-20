@@ -16,4 +16,4 @@ jobs:
         run: npm run lint
 
       - name: Run tests
-        run: spago test
+        run: yarn spago test

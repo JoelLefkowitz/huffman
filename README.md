@@ -77,7 +77,7 @@ show decoded
 To run tests:
 
 ```bash
-spago test
+yarn spago test
 ```
 
 ### Documentation
@@ -85,7 +85,7 @@ spago test
 To generate the documentation locally:
 
 ```bash
-spago docs
+yarn spago docs
 ```
 
 ### Linters

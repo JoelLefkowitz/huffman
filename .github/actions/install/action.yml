@@ -28,7 +28,7 @@ runs:
 
     - name: Install PureScript dependencies
       shell: bash
-      run: spago install
+      run: yarn spago install
 
     - name: Install trufflehog3
       shell: bash

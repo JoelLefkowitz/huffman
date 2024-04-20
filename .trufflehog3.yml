@@ -22,7 +22,8 @@ exclude:
 
   - message: Tooling outputs
     paths:
-      - output/cache-db.json
+      - generated-docs
+      - output
       - spago.lock
       - yarn-error.log
       - yarn.lock
