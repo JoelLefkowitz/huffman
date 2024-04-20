@@ -25,6 +25,7 @@
   "words": [
     "bumpversion",
     "codacy",
+    "corepack",
     "dhall",
     "foldl",
     "forall",

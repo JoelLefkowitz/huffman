@@ -12,6 +12,10 @@ runs:
     - name: Checkout the source code
       uses: actions/checkout@v4
 
+    - name: Enable corepack
+      shell: bash
+      run: corepack enable
+
     - name: Set the node version
       uses: actions/setup-node@v4
       with:
@@ -20,10 +24,12 @@ runs:
 
     - name: Install node dependencies
       shell: bash
-      run: |
-        yarn install --frozen-lockfile
-        yarn global add spago@0.93.0 purescript
+      run: yarn install --immutable
 
     - name: Install PureScript dependencies
       shell: bash
       run: spago install
+
+    - name: Install trufflehog3
+      shell: bash
+      run: pip install trufflehog3
