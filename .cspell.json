@@ -1,22 +1,34 @@
 {
   "language": "en",
   "ignorePaths": [
+    ".DS_Store",
     ".git",
     ".gitignore",
     ".husky",
+    ".psc-ide-port",
     ".spago",
-    "coverage",
-    "dist",
+    ".yarn",
+    "bower_components",
     "generated-docs",
+    "node_modules",
     "output",
     "yarn-error.log"
   ],
-  "dictionaries": ["bash", "en-gb", "misc", "node", "softwareTerms"],
+  "dictionaries": [
+    "aws",
+    "bash",
+    "en-gb",
+    "fullstack",
+    "misc",
+    "softwareTerms"
+  ],
   "words": [
     "bumpversion",
     "codacy",
+    "dhall",
     "foldl",
     "forall",
+    "giphy",
     "joellefkowitz",
     "lefkowitz",
     "newtype",
@@ -27,6 +39,7 @@
     "repr",
     "spago",
     "stringutils",
+    "trufflehog",
     "unfoldable"
   ]
 }

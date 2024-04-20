@@ -1,0 +1,27 @@
+severity: low
+exclude:
+  - message: Giphy links
+    pattern: media\.giphy\.com
+
+  - message: Shield links
+    pattern: img\.shields\.io
+
+  - message: Codacy references
+    pattern: "codacy_id:"
+
+  - message: Dependencies
+    paths:
+      - node_modules
+      - .spago
+
+  - message: Package management
+    paths: 
+      - packages.dhall
+      - purs.json
+      - spago.yaml
+
+  - message: Tooling outputs
+    paths:
+      - yarn-error.log
+      - yarn.lock
+      - output/cache-db.json

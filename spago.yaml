@@ -29,6 +29,17 @@ package:
       - --minify
       - --outfile=dist/bundle.js
 
+metadata:
+  publisher: Pursuit
+  languages:
+    - PureScript
+
+  frameworks: []
+  paradigms:
+    - Functional
+
+  lifecycle: Alpha
+
 workspace:
   package_set:
     registry: 41.2.0
