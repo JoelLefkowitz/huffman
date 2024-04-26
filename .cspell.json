@@ -1,19 +1,5 @@
 {
   "language": "en",
-  "ignorePaths": [
-    ".DS_Store",
-    ".git",
-    ".gitignore",
-    ".husky",
-    ".psc-ide-port",
-    ".spago",
-    ".yarn",
-    "bower_components",
-    "generated-docs",
-    "node_modules",
-    "output",
-    "yarn-error.log"
-  ],
   "dictionaries": [
     "aws",
     "bash",
@@ -22,13 +8,13 @@
     "misc",
     "softwareTerms"
   ],
+  "ignorePaths": [".git"],
   "words": [
     "bumpversion",
     "codacy",
     "corepack",
     "dhall",
     "foldl",
-    "forall",
     "giphy",
     "joellefkowitz",
     "lefkowitz",

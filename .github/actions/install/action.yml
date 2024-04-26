@@ -22,11 +22,11 @@ runs:
         node-version: ${{ inputs.node-version }}
         cache: yarn
 
-    - name: Install node dependencies
+    - name: Install yarn dependencies
       shell: bash
       run: yarn install --immutable
 
-    - name: Install PureScript dependencies
+    - name: Install spago dependencies
       shell: bash
       run: yarn spago install
 
