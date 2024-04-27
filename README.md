@@ -77,6 +77,7 @@ show decoded
 To install dependencies:
 
 ```bash
+yarn install
 yarn spago install
 ```
 
