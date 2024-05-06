@@ -15,7 +15,7 @@ exclude:
       - .spago
 
   - message: Package management
-    paths: 
+    paths:
       - packages.dhall
       - purs.json
       - spago.yaml

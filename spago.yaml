@@ -1,7 +1,6 @@
 package:
   name: huffman
   description: Huffman coding. Lossless data compression.
-  private: true
   repository: https://github.com/JoelLefkowitz/huffman
   homepage: https://joellefkowitz.github.io/huffman
   keywords:
