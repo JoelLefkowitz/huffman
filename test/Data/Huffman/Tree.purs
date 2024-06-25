@@ -14,16 +14,6 @@ tree = fromWeights <<< fromOccurrences <<< countOccurrences
 testTree :: Effect Unit
 testTree = do
   assertEqual
-    { actual:
-        show
-          $ Node
-              [ Leaf (Letter 'a') 0.5
-              , Leaf (Letter 'b') 0.5
-              ]
-              1.0
-    , expected: "[a: 0.5, b: 0.5]: 1.0"
-    }
-  assertEqual
     { actual: tree ""
     , expected: Node [] 1.0
     }

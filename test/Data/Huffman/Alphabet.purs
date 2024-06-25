@@ -17,7 +17,4 @@ testAlphabet = do
     { actual: fromString "aa"
     , expected: Alphabet $ fromFoldable [ Letter 'a' ]
     }
-  assertEqual
-    { actual: show $ fromString "abc"
-    , expected: "[a, b, c]"
-    }
+

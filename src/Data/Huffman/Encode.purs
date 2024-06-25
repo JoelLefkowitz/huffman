@@ -1,19 +1,19 @@
 module Data.Huffman.Encode where
 
 import Prelude
+
 import Data.Array (head)
 import Data.Foldable (foldl)
+import Data.Huffman.Codewords (Codewords(..))
+import Data.Huffman.Letter (Letter(..), toString)
 import Data.Map (filter, keys, lookup)
 import Data.Maybe (fromMaybe)
 import Data.Set (toUnfoldable)
 import Data.String (split)
-import Data.String.CodeUnits (length)
+import Data.String.CodeUnits (length, slice)
 import Data.String.Pattern (Pattern(..))
 import Data.String.Unsafe (char)
 import Data.String.Utils (startsWith)
-import Data.Huffman.Codewords (Codewords(..))
-import Data.Huffman.Letter (Letter(..), toString)
-import Data.String.Repr (trimStart)
 
 encodeWith :: String -> Codewords -> String
 encodeWith s (Codewords codewords) = foldl replace "" symbols
@@ -33,4 +33,4 @@ decodeWith s (Codewords codewords)
 
     codeword = fromMaybe "" $ lookup symbol match
 
-    remaining = trimStart codeword s
+    remaining = slice (length codeword) (length s) s

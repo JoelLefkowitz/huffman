@@ -2,9 +2,8 @@ module Data.Huffman.Codewords where
 
 import Prelude
 import Data.Array (concat)
-import Data.Foldable (foldl)
+import Data.Huffman.Letter (Letter, toString)
 import Data.Huffman.Occurrences (countOccurrences)
-import Data.Huffman.Letter (toString, Letter)
 import Data.Huffman.Tree (HuffmanTree(..), fromWeights)
 import Data.Huffman.Weights (fromOccurrences)
 import Data.List (zip)
@@ -21,18 +20,7 @@ instance eqCodewords :: Eq Codewords where
   eq (Codewords x) (Codewords y) = eq x y
 
 instance showCodewords :: Show Codewords where
-  show (Codewords x) =
-    utf16ToBinary
-      $ foldl
-          ( \acc (Tuple a b) ->
-              acc
-                <> toString a
-                <> "="
-                <> b
-                <> " "
-          )
-          ""
-      $ zip (keys x) (values x)
+  show (Codewords x) = show $ (\(Tuple k v) -> toString k <> ": " <> utf16ToBinary v) <$> zip (keys x) (values x)
 
 composeCodewords :: String -> Codewords
 composeCodewords =

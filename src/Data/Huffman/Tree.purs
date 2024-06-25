@@ -6,7 +6,6 @@ import Data.Map.Internal (toUnfoldable)
 import Data.Tuple (Tuple(..))
 import Data.Huffman.Letter (Letter)
 import Data.Huffman.Weights (Weights(..))
-import Data.String.Repr (joinWith)
 
 data HuffmanTree
   = Node (Array (HuffmanTree)) Number
@@ -21,7 +20,7 @@ instance ordHuffmanTree :: Ord HuffmanTree where
   compare x y = compare (weight x) (weight y)
 
 instance showHuffmanTree :: Show HuffmanTree where
-  show (Node arr w) = "[" <> (joinWith ", " arr) <> "]: " <> show w
+  show (Node arr w) = show arr <> ": " <> show w
   show (Leaf s w) = show s <> ": " <> show w
 
 weight :: HuffmanTree -> Number
