@@ -16,12 +16,21 @@ package:
       githubRepo: huffman
 
   dependencies:
+    - arrays: ">=5.0.0 <6.0.0"
     - foldable-traversable: ">=5.0.1 <6.0.0"
+    - integers: ">=5.0.0 <6.0.0"
+    - lists: ">=5.0.0 <6.0.0"
+    - maybe: ">=5.0.0 <6.0.0"
     - ordered-collections: ">=2.0.2 <3.0.0"
     - prelude: ">=5.0.1 <6.0.0"
     - repr: ">=0.4.0 <1.0.0"
     - strings: ">=5.0.0 <6.0.0"
     - stringutils: ">=0.0.11 <1.0.0"
+    - tuples: ">=5.0.0 <6.0.0"
+
+  build:
+    pedanticPackages: true
+    strict: true
 
   test:
     main: Test.Main
@@ -29,11 +38,6 @@ package:
       - assert
       - debug
       - effect
-
-  bundle:
-    extra_args:
-      - --minify
-      - --outfile=dist/bundle.js
 
 metadata:
   publisher: Pursuit
@@ -47,10 +51,10 @@ metadata:
   lifecycle: Alpha
 
 workspace:
-  package_set:
+  packageSet:
     registry: 41.2.0
 
-  extra_packages:
+  extraPackages:
     repr:
       git: https://github.com/joellefkowitz/repr.git
       ref: 98ac605cebeba1c5082009d527e14daab7fdefd2

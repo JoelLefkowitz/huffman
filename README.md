@@ -14,12 +14,13 @@ spago install huffman
 
 ## Documentation
 
-Documentation and more detailed examples are hosted on [Github Pages](https://joellefkowitz.github.io/huffman).
+Documentation and more detailed examples are hosted on [Pursuit](https://pursuit.purescript.org/packages/purescript-huffman).
 
 ## Usage
 
 ```purs
-import Huffman (composeCodewords, encodeWith, decodeWith)
+import Data.Huffman.Codewords (composeCodewords)
+import Data.Huffman.Encode (decodeWith, encodeWith)
 
 str = "A strongly-typed functional programming language that compiles to JavaScript"
 ```
@@ -102,7 +103,7 @@ yarn spago docs
 To run linters:
 
 ```bash
-npm run lint
+yarn lint
 ```
 
 ### Formatters
@@ -110,7 +111,7 @@ npm run lint
 To run formatters:
 
 ```bash
-npm run format
+yarn format
 ```
 
 ## Contributing

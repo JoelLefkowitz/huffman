@@ -1,19 +1,19 @@
-module Data.Huffman.Symbol where
+module Data.Huffman.Letter where
 
 import Prelude
 import Data.String.CodeUnits (singleton)
 
-newtype Symbol
+newtype Letter
   = Symbol Char
 
-instance eqSymbol :: Eq Symbol where
+instance eqLetter :: Eq Letter where
   eq (Symbol x) (Symbol y) = eq x y
 
-instance ordSymbol :: Ord Symbol where
+instance ordLetter :: Ord Letter where
   compare (Symbol x) (Symbol y) = compare x y
 
-instance showSymbol :: Show Symbol where
+instance showLetter :: Show Letter where
   show (Symbol x) = singleton x
 
-toString :: Symbol -> String
+toString :: Letter -> String
 toString (Symbol s) = singleton s

@@ -12,25 +12,25 @@ import Data.String.Pattern (Pattern(..))
 import Data.String.Unsafe (char)
 import Data.String.Utils (startsWith)
 import Data.Huffman.Codewords (Codewords(..))
-import Data.Huffman.Symbol (Symbol(..), toString)
+import Data.Huffman.Letter (Letter(..), toString)
 import Data.String.Repr (trimStart)
 
 encodeWith :: String -> Codewords -> String
-encodeWith str (Codewords codewords) = foldl replace "" symbols
+encodeWith s (Codewords codewords) = foldl replace "" symbols
   where
-  symbols = Symbol <<< char <$> split (Pattern "") str
+  symbols = Symbol <<< char <$> split (Pattern "") s
 
   replace acc x = acc <> (fromMaybe "" (lookup x codewords))
 
 decodeWith :: String -> Codewords -> String
-decodeWith str (Codewords codewords)
-  | length str == 0 = ""
+decodeWith s (Codewords codewords)
+  | length s == 0 = ""
   | otherwise = toString symbol <> decodeWith remaining (Codewords codewords)
     where
-    match = filter (\i -> startsWith i str) codewords
+    match = filter (\i -> startsWith i s) codewords
 
     symbol = fromMaybe (Symbol '_') <<< head <<< toUnfoldable $ keys match
 
     codeword = fromMaybe "" $ lookup symbol match
 
-    remaining = trimStart codeword str
+    remaining = trimStart codeword s

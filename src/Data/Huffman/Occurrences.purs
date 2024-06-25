@@ -7,10 +7,10 @@ import Data.Maybe (fromMaybe)
 import Data.String.Common (split)
 import Data.String.Pattern (Pattern(..))
 import Data.String.Unsafe (char)
-import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Letter (Letter(..))
 
 newtype Occurrences
-  = Occurrences (Map Symbol Int)
+  = Occurrences (Map Letter Int)
 
 instance eqOccurrences :: Eq Occurrences where
   eq (Occurrences x) (Occurrences y) = eq x y
@@ -19,9 +19,9 @@ instance showOccurrences :: Show Occurrences where
   show (Occurrences x) = show x
 
 countOccurrences :: String -> Occurrences
-countOccurrences str = Occurrences $ foldl increment empty symbols
+countOccurrences s = Occurrences $ foldl increment empty symbols
   where
-  symbols = Symbol <<< char <$> split (Pattern "") str
+  symbols = Symbol <<< char <$> split (Pattern "") s
 
   increment acc x = insert x (lookupInt x acc + 1) acc
 

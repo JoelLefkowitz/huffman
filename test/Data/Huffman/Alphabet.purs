@@ -4,7 +4,7 @@ import Prelude
 import Data.Set (fromFoldable)
 import Effect (Effect)
 import Data.Huffman.Alphabet (Alphabet(..), fromString)
-import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Letter (Letter(..))
 import Test.Assert (assertEqual)
 
 testAlphabet :: Effect Unit

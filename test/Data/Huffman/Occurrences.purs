@@ -5,7 +5,7 @@ import Data.Map (empty, singleton, fromFoldable)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Data.Huffman.Occurrences (Occurrences(..), countOccurrences)
-import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Letter (Letter(..))
 import Test.Assert (assertEqual)
 
 testOccurrences :: Effect Unit

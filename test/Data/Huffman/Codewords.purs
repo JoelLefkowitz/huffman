@@ -5,7 +5,7 @@ import Data.Map (empty, fromFoldable, singleton)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Data.Huffman.Codewords (Codewords(..), composeCodewords)
-import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Letter (Letter(..))
 import Test.Assert (assertEqual)
 
 testCodewords :: Effect Unit

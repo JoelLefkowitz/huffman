@@ -4,13 +4,13 @@ import Prelude
 import Data.Array (foldl, insert, length, slice, sort)
 import Data.Map.Internal (toUnfoldable)
 import Data.Tuple (Tuple(..))
-import Data.Huffman.Symbol (Symbol)
+import Data.Huffman.Letter (Letter)
 import Data.Huffman.Weights (Weights(..))
 import Data.String.Repr (joinWith)
 
 data HuffmanTree
   = Node (Array (HuffmanTree)) Number
-  | Leaf Symbol Number
+  | Leaf Letter Number
 
 instance eqHuffmanTree :: Eq HuffmanTree where
   eq (Node arr1 w1) (Node arr2 w2) = eq arr1 arr2 && eq w1 w2
@@ -25,9 +25,9 @@ instance showHuffmanTree :: Show HuffmanTree where
   show (Leaf s w) = show s <> ": " <> show w
 
 weight :: HuffmanTree -> Number
-weight (Node arr w) = w
+weight (Node _ w) = w
 
-weight (Leaf s w) = w
+weight (Leaf _ w) = w
 
 sum :: Array HuffmanTree -> Number
 sum arr = foldl (\acc x -> acc + weight x) 0.0 arr

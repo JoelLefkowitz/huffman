@@ -5,10 +5,10 @@ import Data.Foldable (sum)
 import Data.Int (toNumber)
 import Data.Map (Map, values)
 import Data.Huffman.Occurrences (Occurrences(..))
-import Data.Huffman.Symbol (Symbol)
+import Data.Huffman.Letter (Letter)
 
 newtype Weights
-  = Weights (Map Symbol Number)
+  = Weights (Map Letter Number)
 
 instance eqWeights :: Eq Weights where
   eq (Weights x) (Weights y) = eq x y

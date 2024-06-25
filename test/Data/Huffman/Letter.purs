@@ -1,12 +1,12 @@
-module Test.Data.Huffman.Symbol where
+module Test.Data.Huffman.Letter where
 
 import Prelude
 import Effect (Effect)
-import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Letter (Letter(..))
 import Test.Assert (assertEqual)
 
-testSymbol :: Effect Unit
-testSymbol = do
+testLetter :: Effect Unit
+testLetter = do
   assertEqual
     { actual: show $ Symbol 'a'
     , expected: "a"

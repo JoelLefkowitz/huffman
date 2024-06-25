@@ -3,7 +3,7 @@ module Test.Data.Huffman.Tree where
 import Prelude
 import Effect (Effect)
 import Data.Huffman.Occurrences (countOccurrences)
-import Data.Huffman.Symbol (Symbol(..))
+import Data.Huffman.Letter (Letter(..))
 import Data.Huffman.Tree (HuffmanTree(..), fromWeights)
 import Data.Huffman.Weights (fromOccurrences)
 import Test.Assert (assertEqual)
