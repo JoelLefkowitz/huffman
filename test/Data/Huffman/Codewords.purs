@@ -16,24 +16,24 @@ testCodewords = do
     }
   assertEqual
     { actual: composeCodewords "a"
-    , expected: Codewords $ singleton (Symbol 'a') "0"
+    , expected: Codewords $ singleton (Letter 'a') "0"
     }
   assertEqual
     { actual: composeCodewords "ab"
     , expected:
         Codewords <<< fromFoldable
-          $ [ Tuple (Symbol 'a') "0"
-            , Tuple (Symbol 'b') "1"
+          $ [ Tuple (Letter 'a') "0"
+            , Tuple (Letter 'b') "1"
             ]
     }
   assertEqual
     { actual: composeCodewords "abcd"
     , expected:
         Codewords <<< fromFoldable
-          $ [ Tuple (Symbol 'a') "10"
-            , Tuple (Symbol 'b') "11"
-            , Tuple (Symbol 'c') "00"
-            , Tuple (Symbol 'd') "01"
+          $ [ Tuple (Letter 'a') "10"
+            , Tuple (Letter 'b') "11"
+            , Tuple (Letter 'c') "00"
+            , Tuple (Letter 'd') "01"
             ]
     }
   assertEqual
@@ -41,8 +41,8 @@ testCodewords = do
     { actual: composeCodewords "abcc"
     , expected:
         Codewords <<< fromFoldable
-          $ [ Tuple (Symbol 'a') "00"
-            , Tuple (Symbol 'b') "01"
-            , Tuple (Symbol 'c') "1"
+          $ [ Tuple (Letter 'a') "00"
+            , Tuple (Letter 'b') "01"
+            , Tuple (Letter 'c') "1"
             ]
     }

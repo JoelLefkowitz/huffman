@@ -18,7 +18,7 @@ import Data.String.Repr (trimStart)
 encodeWith :: String -> Codewords -> String
 encodeWith s (Codewords codewords) = foldl replace "" symbols
   where
-  symbols = Symbol <<< char <$> split (Pattern "") s
+  symbols = Letter <<< char <$> split (Pattern "") s
 
   replace acc x = acc <> (fromMaybe "" (lookup x codewords))
 
@@ -29,7 +29,7 @@ decodeWith s (Codewords codewords)
     where
     match = filter (\i -> startsWith i s) codewords
 
-    symbol = fromMaybe (Symbol '_') <<< head <<< toUnfoldable $ keys match
+    symbol = fromMaybe (Letter '_') <<< head <<< toUnfoldable $ keys match
 
     codeword = fromMaybe "" $ lookup symbol match
 

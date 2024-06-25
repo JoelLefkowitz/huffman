@@ -17,8 +17,8 @@ testTree = do
     { actual:
         show
           $ Node
-              [ Leaf (Symbol 'a') 0.5
-              , Leaf (Symbol 'b') 0.5
+              [ Leaf (Letter 'a') 0.5
+              , Leaf (Letter 'b') 0.5
               ]
               1.0
     , expected: "[a: 0.5, b: 0.5]: 1.0"
@@ -29,14 +29,14 @@ testTree = do
     }
   assertEqual
     { actual: tree "a"
-    , expected: Node [ Leaf (Symbol 'a') 1.0 ] 1.0
+    , expected: Node [ Leaf (Letter 'a') 1.0 ] 1.0
     }
   assertEqual
     { actual: tree "ab"
     , expected:
         Node
-          [ Leaf (Symbol 'a') 0.5
-          , Leaf (Symbol 'b') 0.5
+          [ Leaf (Letter 'a') 0.5
+          , Leaf (Letter 'b') 0.5
           ]
           1.0
     }
@@ -46,11 +46,11 @@ testTree = do
     , expected:
         Node
           [ Node
-              [ Leaf (Symbol 'a') 0.25
-              , Leaf (Symbol 'b') 0.25
+              [ Leaf (Letter 'a') 0.25
+              , Leaf (Letter 'b') 0.25
               ]
               0.5
-          , Leaf (Symbol 'c') 0.5
+          , Leaf (Letter 'c') 0.5
           ]
           1.0
     }
@@ -60,26 +60,26 @@ testTree = do
         Node
           [ Node
               [ Node
-                  [ Leaf (Symbol 'c') 0.125
-                  , Leaf (Symbol 'd') 0.125
+                  [ Leaf (Letter 'c') 0.125
+                  , Leaf (Letter 'd') 0.125
                   ]
                   0.25
               , Node
-                  [ Leaf (Symbol 'a') 0.125
-                  , Leaf (Symbol 'b') 0.125
+                  [ Leaf (Letter 'a') 0.125
+                  , Leaf (Letter 'b') 0.125
                   ]
                   0.25
               ]
               0.5
           , Node
               [ Node
-                  [ Leaf (Symbol 'g') 0.125
-                  , Leaf (Symbol 'h') 0.125
+                  [ Leaf (Letter 'g') 0.125
+                  , Leaf (Letter 'h') 0.125
                   ]
                   0.25
               , Node
-                  [ Leaf (Symbol 'e') 0.125
-                  , Leaf (Symbol 'f') 0.125
+                  [ Leaf (Letter 'e') 0.125
+                  , Leaf (Letter 'f') 0.125
                   ]
                   0.25
               ]

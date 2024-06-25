@@ -16,7 +16,7 @@ testWeights = do
     , expected:
         Weights
           $ fromFoldable
-              [ Tuple (Symbol 'a') 0.5
-              , Tuple (Symbol 'b') 0.5
+              [ Tuple (Letter 'a') 0.5
+              , Tuple (Letter 'b') 0.5
               ]
     }

@@ -19,4 +19,4 @@ instance showAlphabet :: Show Alphabet where
 fromString :: String -> Alphabet
 fromString s = Alphabet (fromFoldable symbols)
   where
-  symbols = Symbol <<< char <$> split (Pattern "") s
+  symbols = Letter <<< char <$> split (Pattern "") s

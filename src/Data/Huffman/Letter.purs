@@ -1,19 +1,17 @@
 module Data.Huffman.Letter where
 
+import Prim
 import Prelude
 import Data.String.CodeUnits (singleton)
 
 newtype Letter
-  = Symbol Char
+  = Letter Char
 
-instance eqLetter :: Eq Letter where
-  eq (Symbol x) (Symbol y) = eq x y
-
-instance ordLetter :: Ord Letter where
-  compare (Symbol x) (Symbol y) = compare x y
+derive instance eqLetter :: Eq Letter
+derive instance ordLetter :: Ord Letter
 
 instance showLetter :: Show Letter where
-  show (Symbol x) = singleton x
+  show (Letter x) = singleton x
 
 toString :: Letter -> String
-toString (Symbol s) = singleton s
+toString (Letter x) = singleton x

@@ -8,6 +8,6 @@ import Test.Assert (assertEqual)
 testLetter :: Effect Unit
 testLetter = do
   assertEqual
-    { actual: show $ Symbol 'a'
+    { actual: show $ Letter 'a'
     , expected: "a"
     }

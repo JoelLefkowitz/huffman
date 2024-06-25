@@ -11,11 +11,11 @@ testAlphabet :: Effect Unit
 testAlphabet = do
   assertEqual
     { actual: fromString "abc"
-    , expected: Alphabet $ fromFoldable [ Symbol 'a', Symbol 'b', Symbol 'c' ]
+    , expected: Alphabet $ fromFoldable [ Letter 'a', Letter 'b', Letter 'c' ]
     }
   assertEqual
     { actual: fromString "aa"
-    , expected: Alphabet $ fromFoldable [ Symbol 'a' ]
+    , expected: Alphabet $ fromFoldable [ Letter 'a' ]
     }
   assertEqual
     { actual: show $ fromString "abc"

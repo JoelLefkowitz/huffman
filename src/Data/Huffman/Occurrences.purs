@@ -21,7 +21,7 @@ instance showOccurrences :: Show Occurrences where
 countOccurrences :: String -> Occurrences
 countOccurrences s = Occurrences $ foldl increment empty symbols
   where
-  symbols = Symbol <<< char <$> split (Pattern "") s
+  symbols = Letter <<< char <$> split (Pattern "") s
 
   increment acc x = insert x (lookupInt x acc + 1) acc
 

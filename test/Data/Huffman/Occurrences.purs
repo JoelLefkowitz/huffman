@@ -16,15 +16,15 @@ testOccurrences = do
     }
   assertEqual
     { actual: countOccurrences "a"
-    , expected: Occurrences $ singleton (Symbol 'a') 1
+    , expected: Occurrences $ singleton (Letter 'a') 1
     }
   assertEqual
     { actual: countOccurrences "ab"
     , expected:
         Occurrences
           $ fromFoldable
-              [ Tuple (Symbol 'a') 1
-              , Tuple (Symbol 'b') 1
+              [ Tuple (Letter 'a') 1
+              , Tuple (Letter 'b') 1
               ]
     }
   assertEqual
@@ -32,7 +32,7 @@ testOccurrences = do
     , expected:
         Occurrences
           $ fromFoldable
-              [ Tuple (Symbol 'a') 1
-              , Tuple (Symbol 'b') 2
+              [ Tuple (Letter 'a') 1
+              , Tuple (Letter 'b') 2
               ]
     }
