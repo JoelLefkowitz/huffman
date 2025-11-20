@@ -2,7 +2,7 @@
 
 Huffman coding. Lossless data compression.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/huffman/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/huffman/review.yaml)
 ![Version](https://pursuit.purescript.org/packages/purescript-huffman/badge)
 ![Quality](https://img.shields.io/codacy/grade/4934e15d76c04969af83eddea6ce5461)
 
