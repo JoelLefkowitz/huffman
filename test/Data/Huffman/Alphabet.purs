@@ -1,13 +1,14 @@
 module Test.Data.Huffman.Alphabet where
 
 import Prelude
-import Data.Set (fromFoldable)
-import Effect (Effect)
+
 import Data.Huffman.Alphabet (Alphabet(..), fromString)
 import Data.Huffman.Letter (Letter(..))
+import Data.Set (fromFoldable)
+import Effect (Effect)
 import Test.Assert (assertEqual)
 
-testAlphabet :: Effect Unit
+testAlphabet ∷ Effect Unit
 testAlphabet = do
   assertEqual
     { actual: fromString "abc"

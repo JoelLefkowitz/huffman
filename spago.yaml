@@ -1,12 +1,6 @@
 package:
   name: huffman
   description: Huffman coding. Lossless data compression.
-  repository: https://github.com/JoelLefkowitz/huffman
-  homepage: https://joellefkowitz.github.io/huffman
-  keywords:
-    - huffman
-    - compression
-    - lossless
 
   publish:
     version: 0.4.0
@@ -35,25 +29,8 @@ package:
     main: Test.Main
     dependencies:
       - assert
-      - debug
       - effect
-
-metadata:
-  publisher: Pursuit
-  languages:
-    - PureScript
-
-  frameworks: []
-  paradigms:
-    - Functional
-
-  lifecycle: Alpha
 
 workspace:
   packageSet:
-    registry: 41.2.0
-
-  extraPackages:
-    repr:
-      git: https://github.com/joellefkowitz/repr.git
-      ref: 98ac605cebeba1c5082009d527e14daab7fdefd2
+    registry: 62.2.7

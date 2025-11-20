@@ -1,14 +1,15 @@
 module Test.Data.Huffman.Occurrences where
 
 import Prelude
-import Data.Map (empty, singleton, fromFoldable)
+
+import Data.Huffman.Letter (Letter(..))
+import Data.Huffman.Occurrences (Occurrences(..), countOccurrences)
+import Data.Map (empty, fromFoldable, singleton)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Data.Huffman.Occurrences (Occurrences(..), countOccurrences)
-import Data.Huffman.Letter (Letter(..))
 import Test.Assert (assertEqual)
 
-testOccurrences :: Effect Unit
+testOccurrences ∷ Effect Unit
 testOccurrences = do
   assertEqual
     { actual: countOccurrences ""

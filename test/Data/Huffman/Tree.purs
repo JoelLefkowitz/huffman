@@ -1,17 +1,18 @@
 module Test.Data.Huffman.Tree where
 
 import Prelude
-import Effect (Effect)
-import Data.Huffman.Occurrences (countOccurrences)
+
 import Data.Huffman.Letter (Letter(..))
+import Data.Huffman.Occurrences (countOccurrences)
 import Data.Huffman.Tree (HuffmanTree(..), fromWeights)
 import Data.Huffman.Weights (fromOccurrences)
+import Effect (Effect)
 import Test.Assert (assertEqual)
 
-tree :: String -> HuffmanTree
+tree ∷ String → HuffmanTree
 tree = fromWeights <<< fromOccurrences <<< countOccurrences
 
-testTree :: Effect Unit
+testTree ∷ Effect Unit
 testTree = do
   assertEqual
     { actual: tree ""
